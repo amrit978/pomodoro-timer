@@ -1,0 +1,22 @@
+# Build output - never commit these, they're huge and machine-specific
+build/
+build-*/
+*.o
+*.obj
+*.exe
+*.dll
+
+# Qt Creator user-specific settings (auto-generated, different per machine)
+*.user
+*.user.*
+CMakeLists.txt.user
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Windows junk files
+Thumbs.db
+desktop.ini
