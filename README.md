@@ -7,7 +7,13 @@ A simple desktop Pomodoro timer built with C++ and Qt6 Widgets.
 
 ## Demo
 
-<video src="docs/demo.mp4" controls width="400"></video>
+
+
+https://github.com/user-attachments/assets/aef9347d-cab4-4c5e-9237-77ee09377a1a
+
+
+
+
 
 ## Features
 
