@@ -2,7 +2,8 @@
 
 A simple desktop Pomodoro timer built with C++ and Qt6 Widgets.
 
-![Pomodoro screenshot](docs/screenshot.png)
+<img width="501" height="638" alt="screenshot" src="https://github.com/user-attachments/assets/7a4885c4-c558-488c-881a-aff6eced6f2b" />
+
 
 ## Demo
 
