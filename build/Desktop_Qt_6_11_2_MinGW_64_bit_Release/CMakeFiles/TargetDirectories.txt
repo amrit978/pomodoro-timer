@@ -1,0 +1,5 @@
+C:/Users/amrit/Desktop/pomodoro/build/Desktop_Qt_6_11_2_MinGW_64_bit_Release/CMakeFiles/pomodoro.dir
+C:/Users/amrit/Desktop/pomodoro/build/Desktop_Qt_6_11_2_MinGW_64_bit_Release/CMakeFiles/edit_cache.dir
+C:/Users/amrit/Desktop/pomodoro/build/Desktop_Qt_6_11_2_MinGW_64_bit_Release/CMakeFiles/rebuild_cache.dir
+C:/Users/amrit/Desktop/pomodoro/build/Desktop_Qt_6_11_2_MinGW_64_bit_Release/CMakeFiles/pomodoro_autogen_timestamp_deps.dir
+C:/Users/amrit/Desktop/pomodoro/build/Desktop_Qt_6_11_2_MinGW_64_bit_Release/CMakeFiles/pomodoro_autogen.dir

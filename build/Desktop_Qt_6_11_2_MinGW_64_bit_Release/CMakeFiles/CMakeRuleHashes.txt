@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+27395705fbb9be3c2682b9a19dff8401 CMakeFiles/pomodoro_autogen
+dbe69feb4ff5d6306dc36896325b99ca pomodoro_autogen/XDSUNTRIOH/qrc_icon.cpp
+3a6f24ce3ef8afc531531fc1e945f174 pomodoro_autogen/XDSUNTRIOH/qrc_sounds.cpp
+817ef0bf7c15f466b2087ee707bd0918 pomodoro_autogen/timestamp
