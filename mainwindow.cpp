@@ -3,7 +3,10 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QIcon>
+<<<<<<< HEAD
 #include <QUrl>
+=======
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,10 +15,13 @@ MainWindow::MainWindow(QWidget *parent)
     applyStyles();
     setWindowIcon(QIcon(":/icon.ico")); // loaded from icon.qrc, embedded in the binary
 
+<<<<<<< HEAD
     notificationSound = new QSoundEffect(this);
     notificationSound->setSource(QUrl("qrc:/notification.wav"));
     notificationSound->setVolume(0.6);
 
+=======
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
     worker = new Worker();
     worker->moveToThread(&workerThread);
 
@@ -26,10 +32,13 @@ MainWindow::MainWindow(QWidget *parent)
     });
     connect(worker, &Worker::stateChanged, this, [this](QString label) {
         stateLabel->setText(label);
+<<<<<<< HEAD
         if (!isFirstPhaseAfterStart) {
             notificationSound->play();
         }
         isFirstPhaseAfterStart = false;
+=======
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
     });
     connect(worker, &Worker::sessionUpdate, this, [this](int count) {
         sessionLabel->setText(QString("Sessions completed: %1").arg(count));
@@ -43,6 +52,10 @@ MainWindow::MainWindow(QWidget *parent)
         startBtn->setEnabled(true);
         pauseBtn->setEnabled(false);
         pauseBtn->setText("Pause");
+<<<<<<< HEAD
+=======
+        stopBtn->setEnabled(false);
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
         cyclesMinusBtn->setEnabled(true);
         cyclesPlusBtn->setEnabled(true);
         if (stateLabel->text() != "Ready")
@@ -51,6 +64,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(startBtn, &QPushButton::clicked, this, &MainWindow::onStart);
     connect(pauseBtn, &QPushButton::clicked, this, &MainWindow::onPause);
+<<<<<<< HEAD
+=======
+    connect(stopBtn, &QPushButton::clicked, this, &MainWindow::onStop);
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
     connect(resetBtn, &QPushButton::clicked, this, &MainWindow::onReset);
     connect(cyclesMinusBtn, &QPushButton::clicked, this, &MainWindow::onCyclesDecrease);
     connect(cyclesPlusBtn, &QPushButton::clicked, this, &MainWindow::onCyclesIncrease);
@@ -127,15 +144,27 @@ void MainWindow::setupUi()
     btnRow->setSpacing(10);
     startBtn = new QPushButton("Start", this);
     pauseBtn = new QPushButton("Pause", this);
+<<<<<<< HEAD
     resetBtn = new QPushButton("Reset", this);
 
     // Slightly taller than default so the whole row is easy to hit
     for (QPushButton *b : {startBtn, pauseBtn, resetBtn}) {
+=======
+    stopBtn = new QPushButton("Stop", this);
+    resetBtn = new QPushButton("Reset", this);
+
+    // Slightly taller than default so the whole row is easy to hit
+    for (QPushButton *b : {startBtn, pauseBtn, stopBtn, resetBtn}) {
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
         b->setMinimumHeight(44);
     }
 
     btnRow->addWidget(startBtn);
     btnRow->addWidget(pauseBtn);
+<<<<<<< HEAD
+=======
+    btnRow->addWidget(stopBtn);
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
     btnRow->addWidget(resetBtn);
 
     layout->addWidget(stateLabel);
@@ -231,13 +260,20 @@ void MainWindow::onCyclesIncrease()
 void MainWindow::onStart()
 {
     worker->setSessionsBeforeLongBreak(cyclesValue);
+<<<<<<< HEAD
     isFirstPhaseAfterStart = true;
+=======
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
 
     isRunning = true;
     isPaused = false;
     startBtn->setEnabled(false);
     pauseBtn->setEnabled(true);
     pauseBtn->setText("Pause");
+<<<<<<< HEAD
+=======
+    stopBtn->setEnabled(true);
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
     updateCyclesLabel(); // disables +/- while running
 
     QMetaObject::invokeMethod(worker, "countdown", Qt::QueuedConnection);
@@ -259,6 +295,16 @@ void MainWindow::onPause()
     }
 }
 
+<<<<<<< HEAD
+=======
+void MainWindow::onStop()
+{
+    // Halts the current cycle but keeps the session count and cycle
+    // setting as they were - use Reset if you want a clean slate.
+    worker->requestStop();
+}
+
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
 void MainWindow::onReset()
 {
     worker->requestStop();
@@ -277,5 +323,9 @@ void MainWindow::resetUiToDefault()
     startBtn->setEnabled(true);
     pauseBtn->setEnabled(false);
     pauseBtn->setText("Pause");
+<<<<<<< HEAD
+=======
+    stopBtn->setEnabled(false);
+>>>>>>> 5242169cbfb87be66719702b5bf9ff9102a8d01f
     updateCyclesLabel();
 }
